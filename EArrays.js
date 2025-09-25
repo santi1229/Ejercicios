@@ -6,8 +6,16 @@ let libros = [
 ];
 
 
-libros=libros.filter(libro => libro.anio > 1950);
+libros=libros.filter(libro => libro.anio > 1900);
+libros=libros.sort((a,b)=>b.anio-a.anio);
+tituloAnio=libros.map(libro => libro.titulo+" ("+libro.anio+").");
 
-libros.forEach(libro => {
-    console.log(libro.titulo);
+let anios=libros.map(libro => libro.anio);
+let promedio=anios.reduce((a, b) => a + b, 0) / anios.length;
+
+
+tituloAnio.forEach(libro => {
+    console.log(libro);
 });
+console.log("Promedio de años de publicación:", promedio);
+console.log();
