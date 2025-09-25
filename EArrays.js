@@ -1,16 +1,13 @@
-let libros=[];
+let libros = [
+  { titulo: "El Quijote", autor: "Miguel de Cervantes", anio: 1605 },
+  { titulo: "Cien Años de Soledad", autor: "Gabriel García Márquez", anio: 1967 },
+  { titulo: "1984", autor: "George Orwell", anio: 1949 },
+  { titulo: "El Principito", autor: "Antoine de Saint-Exupéry", anio: 1943 }
+];
 
-libros.push({titulo:"El Quijote", autor:"Miguel de Cervantes", anio:1605});
-libros.push({titulo:"Cien Años de Soledad", autor:"Gabriel García Márquez", anio:1967});
-libros.push({titulo:"1984", autor:"George Orwell", anio:1949});
+
+libros=libros.filter(libro => libro.anio > 1950);
 
 libros.forEach(libro => {
-    console.log(`Título: ${libro.titulo}, Autor: ${libro.autor}`);
-});
-
-libros.pop();
-
-console.log("\nArray final:");
-libros.forEach(libro => {
-    console.log(`Título: ${libro.titulo}, Autor: ${libro.autor}`);
+    console.log(libro.titulo);
 });
