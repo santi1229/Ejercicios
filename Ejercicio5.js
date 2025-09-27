@@ -19,3 +19,14 @@ for (let letra in conteo){
     console.log(letra +": "+conteo[letra]);
 }
 
+/*
+let texto = "programacion";
+let conteo = {};
+
+texto.split("").forEach(letra => {
+    conteo[letra] = (conteo[letra] || 0) + 1;
+});
+
+console.log(conteo);
+// { p:1, r:2, o:2, g:1, a:2, m:1, c:1, i:1, n:1 }
+*/
